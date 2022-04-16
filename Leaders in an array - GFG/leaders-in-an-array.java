@@ -59,7 +59,8 @@ class Solution{
                 
             }
         }
-        Collections.reverse(li);
+        Collections.reverse(li);//doing add(0,t) takes more time than Collections.reverse(li)
+        
         return li;
     }
 }
