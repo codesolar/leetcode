@@ -1,12 +1,12 @@
 class Solution {
-//     class com implements Comparator<int[]> {
-//     @Override
-//     public int compare(int[] a, int[] b) {
-//         return a[0]-b[0];
-//     }
-// }
+    class com implements Comparator<int[]> {
+    @Override
+    public int compare(int[] a, int[] b) {
+        return a[0]-b[0];
+    }
+}
     public int[][] merge(int[][] intervals) {
-        Arrays.sort(intervals,(a,b) -> a[0] - b[0]);
+        Arrays.sort(intervals,new com());
         ArrayList<int[]> br=new ArrayList<>();
         int s=intervals[0][0];
         int e=intervals[0][1];
