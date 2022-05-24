@@ -1,5 +1,10 @@
 class Solution {
 public int subarraySum(int[] nums, int k) {
+    
+    
+    //do again
+    
+    
     Map<Integer,Integer> mymap = new HashMap<>();
     int sum=0;
     mymap.put(sum,1); // frequency of 0 is 1
