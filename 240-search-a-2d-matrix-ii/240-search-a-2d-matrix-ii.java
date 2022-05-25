@@ -14,7 +14,6 @@ class Solution {
                 break;
             }
         }
-        System.out.print(re +" "+ce);
         for(int i=0;i<re;i++){
             for(int j=0;j<ce;j++){
                 if(matrix[i][j]==target)
