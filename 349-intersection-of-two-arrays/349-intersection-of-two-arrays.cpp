@@ -12,8 +12,6 @@ public:
         }
         for(int i=0;i<1000;i++){
             n1[i]=n1[i]+n2[i];
-        }
-        for(int i=0;i<1000;i++){
             if(n1[i]==1) v.push_back(i);
         }
         return v;
