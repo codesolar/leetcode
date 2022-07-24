@@ -9,22 +9,13 @@
 class Solution {
 public:
     bool hasCycle(ListNode *head) {
-        unordered_map<long long int,int> mp;
-        bool find=false;
-        auto temp=head;
-        while(temp){
-            long long int address=reinterpret_cast<long long int>(temp);
-        
-            if(mp.find(address)==mp.end()){
-                mp.insert({address,1});
-            }
-            else{
-                find=true;
-                break;
-            }
-            temp=temp->next;
+        auto slow=head,fast=head;
+        while(fast and fast->next and fast->next!=slow){
+            fast=fast->next->next;
+            slow=slow->next;
         }
-        return find;
-        
+        if(fast and fast->next)
+            return true;
+        else return false;
     }
 };
