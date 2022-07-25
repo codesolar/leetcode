@@ -9,17 +9,19 @@
 class Solution {
 public:
     ListNode *detectCycle(ListNode *head) {
-        unordered_map<long long int,int> mp;
-        auto temp=head;
-        while(temp){
-            long long int address=reinterpret_cast<long long int>(temp);
-            if(mp.find(address)==mp.end()){
-                mp.insert({address,1});
+        auto slow=head,fast=head;
+        while(fast and fast->next){
+            fast=fast->next->next;
+            slow=slow->next;
+            if(slow==fast) break;//it was wrong by me , at first slow is first ,so not //written in the start of the loop
+        }
+        if(fast and fast->next){
+            auto temp=head;
+            while(temp!=fast){
+                temp=temp->next;
+                fast=fast->next;
             }
-            else{
-                return temp;
-            }
-            temp=temp->next;
+            return temp;
         }
         return NULL;
     }
