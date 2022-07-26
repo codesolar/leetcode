@@ -1,23 +1,21 @@
 class Solution {
 public:
-    int binary_search(vector<int> &nums,int l,int r,int x,int y){
+    int binary_search(vector<int> &nums,int l,int r,int x){
         if(l<=r){
             int mid=l+(r-l)/2;
             if(nums[mid]==x){
                 return mid;
             }
             else if(nums[mid]>x){
-                y=0;
-                return binary_search(nums,l,mid-1,x,y);//r
+                return binary_search(nums,l,mid-1,x);//r
             }
             else{
-                y=1;
-                return binary_search(nums,mid+1,r,x,y);//l
+                return binary_search(nums,mid+1,r,x);//l
             }
         }
         return l;
     }
     int searchInsert(vector<int>& nums, int target) {
-        return binary_search(nums,0,nums.size()-1,target,-1);
+        return binary_search(nums,0,nums.size()-1,target);
     }
 };
