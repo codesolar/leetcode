@@ -26,7 +26,6 @@ public:
                     start=mid+1;
                 }
             }
-            cout<<mid;
             if(matrix[mid][0]==target) return true;
             else{
                 //now the row matrix[end][0]contains the element
