@@ -13,23 +13,16 @@ class Solution {
 public:
     vector<int> v;
     bool isValidBST(TreeNode* root) {
-        bool flag=true;
-        inorder(root);
-        for(int i=0;i<v.size()-1;i++){
-            if(v[i]>=v[i+1]){
-                flag=false;
-                break;
-            }
-        }
-        return flag;
+        if(root==NULL) return true;
+        return isValid(root,LONG_MIN,LONG_MAX);
     }
-    void inorder(TreeNode* root){
-        if(root){
-            inorder(root->left);
-            v.push_back(root->val);
-            inorder(root->right);
+    bool isValid(TreeNode* root,long minim,long maxim){
+        if(root==NULL) return true;
+        if(root->val>minim and root->val<maxim){
+            return isValid(root->left,minim,root->val) and isValid(root->right,root->val,maxim);
         }
-
+        return false;
+        
     }
     
 };
