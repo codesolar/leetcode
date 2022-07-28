@@ -24,7 +24,6 @@ public:
     }
     void countN(TreeNode* root,int h){
         if(root){
-            cout<<root->val<<endl;
             countN(root->left,h-1);
             if(root->left==NULL and root->right==NULL and h==0) count++;
             countN(root->right,h-1);
