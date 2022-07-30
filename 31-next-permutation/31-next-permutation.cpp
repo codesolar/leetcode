@@ -53,25 +53,16 @@ public:
                 if(flag==false){
                     continue;
                 }
-                cout<<"he";
                 int next=i+1;
-                cout<<next;
                 for(int k=i+1;k<nums.size();k++){
                     if(nums[k]>nums[i] and nums[k]<nums[next]){
                         next=k;
                     }
                 }
-                cout<<next;
-                for(int l=0;l<nums.size();l++){
-                    cout<<nums[l];
-                }
                 int t=nums[i];
                 nums[i]=nums[next];
                 cout<<nums[next];
                 nums[next]=t;
-                for(int l=0;l<nums.size();l++){
-                    cout<<nums[l];
-                }
                 insertion_sort(nums,i+1);
                 break;
             }
