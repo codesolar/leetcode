@@ -9,23 +9,21 @@ public:
         if(n==0){
             if(map.find(n)==map.end())
                 map.insert({0,0});
-            return map[0];
+            return map[n];
         }
         if(n==1){
             if(map.find(n)==map.end())
             map.insert({1,nums[n-1]});
-            return map[1];
+            return map[n];
         }
         if(n==2){
             if(map.find(n)==map.end())
             map.insert({2,max(nums[n-2],nums[n-1])});
-            return map[2];
+            return map[n];
         }
         
         int w1=nums[n-1]+moneyRob(nums,n-2);
-        cout<<w1<<endl<<n<<endl;
         int w2=nums[n-2]+moneyRob(nums,n-3);
-        cout<<w2<<endl<<n<<endl;
         map.insert({n,max(w1,w2)});
         return map[n];
         
