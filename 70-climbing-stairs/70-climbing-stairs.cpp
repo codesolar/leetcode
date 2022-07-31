@@ -1,12 +1,17 @@
 class Solution {
 public:
+    unordered_map<int,int> map;
     int climbStairs(int n) {
-        unordered_map<int,int> mp;
-        mp.insert({0,1});
-        mp.insert({1,1});
-        for(int i=2;i<=n;i++){
-            mp.insert({i,mp[i-2]+mp[i-1]});
+        if(map.find(n)!=map.end()){
+            return map[n];
         }
-       return mp[n]; 
+        if(n==0){
+            return 1;
+        }
+        if(n==1){
+            return 1;
+        }
+        map.insert({n,climbStairs(n-1)+climbStairs(n-2)});
+        return map[n];
     }
 };
