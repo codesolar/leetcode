@@ -36,18 +36,11 @@ public:
         for(int i=0;i<nums.size()-1;i++){
             v1.push_back(nums[i]);
         }
-        for(int i=0;i<v1.size();i++){
-            cout<<v1[i];
-        }
         int w1=moneyRob(v1,v1.size());
         vector<int> v2;
         for(int i=1;i<nums.size();i++){
             v2.push_back(nums[i]);
         }
-         for(int i=0;i<v2.size();i++){
-            cout<<v2[i];
-        }
-        cout<<w1;
         map.clear();
         int w2=moneyRob(v2,v2.size());
         cout<<w2;
