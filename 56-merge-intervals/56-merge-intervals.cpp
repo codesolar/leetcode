@@ -7,11 +7,6 @@ public:
         vector<vector<int>> res;
         
         sort(intervals.begin(),intervals.end(),compareInterval);
-        
-        // for(int i=0;i<intervals.size();i++){
-        //     cout<<intervals[i][0]<<" ";
-        //     cout<<intervals[i][1]<<endl;
-        // }
         auto itr=intervals.begin();
         int s=intervals[0][0],e=intervals[0][1];
         int i=0,j=1;
