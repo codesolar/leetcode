@@ -9,8 +9,6 @@ public:
             if(map.find(s[r])==map.end()){
                 map.insert({s[r],r});
             
-                
-                cout<<r<<endl;
             }
             else{
                 if(l<=map[s[r]]){
