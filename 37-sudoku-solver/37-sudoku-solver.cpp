@@ -65,22 +65,12 @@ class Solution {
             }
             return;
         }
-        
-        // cout<<row<<endl;
-        // cout<<col<<endl;
-//         for(int i=0;i<m;i++){
-//             for(int j=0;j<n;j++){
-//                 cout<<board[i][j]<<" ";  
-//             }
-//             cout<<endl;
-//         }
-        
+
             
         if(board[row][col]=='.'){
                 
                 
-            // cout<<"row ="<<row<<endl;
-            // cout<<"col ="<<col<<endl;
+            
             for(int num=1;num<=9;num++){
                 char c=num+'0';
                     
