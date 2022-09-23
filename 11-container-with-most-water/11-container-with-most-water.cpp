@@ -16,16 +16,7 @@ public:
                 j--;
                 
             }
-            else if(height[i]<height[j]){
-                i++;
-            }
-            else if(i+1<j-1 and height[i+1]<height[j-1]){
-                j--;
-            }
-            else if(i+1<j-1 and height[i+1]>=height[j-1]){
-                i++;
-            }
-            else break;
+            else i++;
         }
         // cout<<maxi<<endl;
         // cout<<mini<<endl;
