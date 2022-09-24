@@ -38,18 +38,11 @@ Node* connect(Node* root) {
             if(p.first->left!=NULL){
                 q.push({p.first->left,p.second+1});
             }
-            // else {
-            //     TreeNode *temp=new TreeNode(200);
-            //     q.push({temp,p.second+1})
-            // }
+
             if(p.first->right!=NULL){
                 q.push({p.first->right,p.second+1});
             } 
-            // else {
-            //     TreeNode *temp=new TreeNode(200);
-            //     q.push({temp,p.second+1})
-            // }
-            
+
         }
         for(auto itr:vec){
             for(int i=0;i<itr.size()-1;i++){
